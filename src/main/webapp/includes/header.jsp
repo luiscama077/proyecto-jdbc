@@ -71,9 +71,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="${pageContext.request.contextPath}/AlumnoHome">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Mis Notas</a>
-                        </li>
                     </c:if>
                 </ul>
                 

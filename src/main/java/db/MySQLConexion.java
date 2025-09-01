@@ -13,7 +13,7 @@ public class MySQLConexion {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/registro_academico?useSSL=false&useTimezone=true&serverTimezone=UTC";
 			String usr = "root";
-			String psw = "mysql";
+			String psw = "adminsql";
 			con = DriverManager.getConnection(url, usr, psw);
 		} catch (ClassNotFoundException e) {
 			System.out.println("Error >> Driver no Instalado!!" + e.getMessage());
