@@ -37,39 +37,9 @@ Para configurar y ejecutar este proyecto, necesitarás tener instalado lo siguie
 -   MySQL Server
 -   Un IDE de desarrollo Java (ej. Eclipse, IntelliJ IDEA)
 
-### 1. Configuración de la Base de Datos
+---
 
-1.  **Crear la Base de Datos y Tablas:**
-    El script SQL para crear la base de datos y las tablas se encuentra en el directorio `bd-scripts/BD-registro-academico.sql`. Puedes ejecutar este script en tu servidor MySQL para configurar la base de datos `registro_academico` y todas sus tablas.
-
-    El script completo se encuentra en [bd-scripts/BD-registro-academico.sql](bd-scripts/BD-registro-academico.sql).
-    
-  >  **Nota:** El script ya incluye la creación de la base de datos `registro_academico` y la inserción de roles y un usuario administrador de ejemplo.
-
-1.  **Configurar Credenciales de Conexión:**
-    Abre el archivo `src/main/java/db/MySQLConexion.java` y actualiza las credenciales de la base de datos si son diferentes a las predeterminadas.
-
-    ```java
-    // ...
-    public class MySQLConexion {
-        public static Connection getConexion() {
-            Connection con = null;
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                String url = "jdbc:mysql://localhost:3306/registro_academico?useSSL=false&useTimezone=true&serverTimezone=UTC";
-                String usr = "TU USUARIO"; // <--- Tu usuario de MySQL
-                String psw = "TU CONTRASEÑA"; // <--- Tu contraseña de MySQL
-                con = DriverManager.getConnection(url, usr, psw);
-            } catch (ClassNotFoundException e) {
-                System.out.println("Error >> Driver no Instalado!!" + e.getMessage());
-            }
-            // ...
-        }
-        // ...
-    }
-    ```
-
-### 2. Configuración del Proyecto en el IDE
+### 1. Configuración del Proyecto en el IDE
 
 1.  **Importar el Proyecto:**
     Importa el proyecto en tu IDE (Eclipse, IntelliJ IDEA) como un proyecto web dinámico o un proyecto Java existente.
@@ -95,6 +65,41 @@ Para configurar y ejecutar este proyecto, necesitarás tener instalado lo siguie
     -   `standard-1.1.2.jar`
 
     Si no están, descárgalas y añádelas manualmente a la carpeta `src/main/webapp/WEB-INF/lib` de tu proyecto y luego inclúyelas en el `Build Path` de tu IDE.
+    
+---
+
+### 2. Configuración de la Base de Datos
+
+1.  **Crear la Base de Datos y Tablas:**
+    El script SQL para crear la base de datos y las tablas se encuentra en el directorio `bd-scripts/BD-registro-academico.sql`. Puedes ejecutar este script en tu servidor MySQL para configurar la base de datos `registro_academico` y todas sus tablas.
+
+    El script completo se encuentra en [bd-scripts/BD-registro-academico.sql](bd-scripts/BD-registro-academico.sql).
+    
+  >  **Nota:** El script ya incluye la creación de la base de datos `registro_academico` y la inserción de roles y un usuario administrador de ejemplo.
+
+2.  **Configurar Credenciales de Conexión:**
+    Abre el archivo `src/main/java/db/MySQLConexion.java` y actualiza las credenciales de la base de datos si son diferentes a las predeterminadas.
+
+    ```java
+    // ...
+    public class MySQLConexion {
+        public static Connection getConexion() {
+            Connection con = null;
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                String url = "jdbc:mysql://localhost:3306/registro_academico?useSSL=false&useTimezone=true&serverTimezone=UTC";
+                String usr = "TU USUARIO"; // <--- Tu usuario de MySQL
+                String psw = "TU CONTRASEÑA"; // <--- Tu contraseña de MySQL
+                con = DriverManager.getConnection(url, usr, psw);
+            } catch (ClassNotFoundException e) {
+                System.out.println("Error >> Driver no Instalado!!" + e.getMessage());
+            }
+            // ...
+        }
+        // ...
+    }
+    ```
+---
 
 ### 3. Despliegue en Apache Tomcat
 
@@ -111,6 +116,8 @@ http://localhost:8080/proyecto-jdbc/login.jsp
 
 **Credenciales de Prueba:**
 -   **Administrador:** `usuario: admin`, `contraseña: admin123`
+
+---
 
 ## Estructura del Proyecto
 
