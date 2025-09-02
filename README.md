@@ -2,6 +2,9 @@
 
 Este proyecto es un sistema de gestión académica desarrollado como una aplicación web en Java, utilizando Servlets para la lógica de negocio y JavaServer Pages (JSP) para la interfaz de usuario. Permite la administración de alumnos, docentes, cursos y usuarios, con funcionalidades de autenticación basada en roles y gestión de matrículas y notas.
 
+![Login](screenshots/login.png)
+![Home Login](screenshots/home-admin.png)
+
 ## Características
 
 -   **Autenticación y Autorización:** Sistema de login con roles de usuario (Administrador, Docente, Alumno).
