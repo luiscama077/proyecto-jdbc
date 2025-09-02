@@ -26,9 +26,9 @@ replay_pid*
 
 # Directorios y archivos específicos del IDE (ej. Eclipse, IntelliJ IDEA)
 .idea/
-#.project
-#.classpath
-#.settings/
+.project
+.classpath
+.settings/
 *.iml
 *.ipr
 *.iws
