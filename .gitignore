@@ -39,7 +39,5 @@ replay_pid*
 *.bak
 *.tmp
 
-# Archivos de configuración local (credenciales de DB, etc.)
-# Si creas un archivo de propiedades para las credenciales de la DB, añádelo aquí.
-# Por ejemplo, si creas un archivo llamado db.properties:
-# db.properties
+# Ignorar manifest generado en webapp
+MANIFEST.MF
